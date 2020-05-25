@@ -1,8 +1,6 @@
 package chapter11;
 
 import javax.swing.*;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
@@ -10,9 +8,9 @@ public class Main {
     public static void main(String[] args) {
         String file = "SalesData.txt";
         int months = 0;
-        double oneMonth = 0;
+        double oneMonth ;
         double totalSales = 0;
-        double averageSales = 0;
+        double averageSales;
 
         Scanner inputFile = BadFileDemo.openFile(file);
 
@@ -51,7 +49,7 @@ public class Main {
                         "Total sales: $%.2f\n" +
                         "Average sales: $%.2f\n",
                         months, totalSales, averageSales));
-        System.exit(0);
 
+        System.exit(0);
     }
 }
