@@ -1,15 +1,17 @@
 package chapter11;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        int[] numArray;
-	    BadArray ba = new BadArray();
-	    numArray = ba.getNumbers();
-
-	    // Attempt to read past the three int array
-        for (int i = 0; i <= 3; i++) {
-            System.out.println(numArray[i]);
+        try {
+            File file = new File("MyFile.txt");
+            Scanner fromFile = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found.");
         }
     }
 }
