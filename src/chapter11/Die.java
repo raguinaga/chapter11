@@ -15,6 +15,7 @@ public class Die {
     public Die(int numSides) {
         //Validate the number of sides
         if (numSides < MIN_SIDES) {
+            // Causes the JVM to actually throw an exception
             throw new IllegalArgumentException("The Die must have at " +
                     "least" + MIN_SIDES + " sides.");
         }
